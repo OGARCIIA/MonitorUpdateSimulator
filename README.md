@@ -109,3 +109,4 @@ Este archivo incluye:
 - Cambios aplicados por el programa
 - Estado final de la carpeta `Target`
 
+También agregue un archivo "diagramas y evidencias.zip" donde se pueden ver evidencias en imagenes de lo descrito anteriormente así como los diagramas corregidos.
