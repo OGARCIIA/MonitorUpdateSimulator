@@ -39,20 +39,21 @@ En el paquete `archivos_prueba_actualizacion.zip` se incluyen:
 
 ```csharp
 static void Main(string[] args)
-{
-    log4net.Config.BasicConfigurator.Configure();
+        {
+            log4net.Config.BasicConfigurator.Configure();
+            string source = @"C:\Source";
+            string target = @"C:\Target";
 
-    string source = @"C:\Source";
-    string target = @"C:\Target";
+            if (!Directory.Exists(source))
+                Directory.CreateDirectory(source);
 
-    if (!Directory.Exists(source)) Directory.CreateDirectory(source);
-    if (!Directory.Exists(target)) Directory.CreateDirectory(target);
-
-    Console.WriteLine("Iniciando actualización...");
-    Sample.MonitorUpdaterManagerSample.UpdateMonitor(source, target, "1.0.0");
-    Console.WriteLine("Actualización finalizada.");
-    Console.ReadKey();
-}
+            if (!Directory.Exists(target))
+                Directory.CreateDirectory(target);
+            Console.WriteLine("Iniciando actualización...");
+            Sample.MonitorUpdaterManagerSample.UpdateMonitor(@"C:\Source", @"C:\Target", "1.0.0");
+            Console.WriteLine("Actualización finalizada.");
+            Console.ReadKey();
+        }
 ```
 
 3. Verifica en consola y en la carpeta `Target` que:
