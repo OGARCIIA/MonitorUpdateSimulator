@@ -213,23 +213,24 @@ namespace Sample
 
             return string.Empty;
         }
-        
+
         private void ExecuteBats(string file, string fileName, string targetRelativeDirectory, bool createBackup, string backupDir, string extension)
         {
-            //ejecuta bats
+            Console.WriteLine($"Simulando ejecución de: {file}");
         }
-
 
         private void CopyFile(string sourceFile, string targetFile)
         {
-           //copia archivo de un lugar a otro
+            var dir = Path.GetDirectoryName(targetFile);
+            if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+            File.Copy(sourceFile, targetFile, true);
         }
 
         private void RemoveFile(string targetFile)
         {
-          //elimina archivo
+            if (File.Exists(targetFile))
+                File.Delete(targetFile);
         }
-
 
         private void MergeXDT(string sourceFile, string targetFile)
         {

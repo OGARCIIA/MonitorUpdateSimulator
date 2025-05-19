@@ -1,0 +1,20 @@
+📂 Target ANTES de la ejecución:
+ - reemplazo.txt:
+Contenido viejo del archivo reemplazo.
+
+ - borrar.txt:
+Este archivo será eliminado.
+
+
+✅ Cambios aplicados:
+ - nuevo.txt agregado
+ - reemplazo.txt actualizado
+ - borrar.txt eliminado
+
+📂 Target DESPUÉS de la ejecución:
+ - reemplazo.txt:
+Este es el contenido actualizado del archivo.
+
+ - nuevo.txt:
+Este es un archivo nuevo agregado.
+
